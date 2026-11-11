@@ -39,19 +39,25 @@ export default function ProjectsPage() {
   return (
     <PageWrapper>
       {/* ── HERO ── */}
-      <section className="relative pt-40 pb-24 max-w-7xl mx-auto px-6 overflow-hidden">
+      <section className="relative pt-24 md:pt-28 pb-10 md:pb-14 max-w-7xl mx-auto px-6 md:px-10 overflow-hidden">
         <div ref={heroRef}>
-          <span className="reveal-line text-xs font-mono text-electric-blue/70 tracking-widest uppercase mb-6 block" style={{ opacity: reduced ? 1 : 0 }}>
+          <span className="reveal-line text-xs font-mono text-[#888888] tracking-widest uppercase mb-4 block" style={{ opacity: reduced ? 1 : 0 }}>
             01 / work
           </span>
-          <h1 className="section-heading reveal-line" style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(3rem,8vw,7rem)' }}>
+          <h1
+            className="reveal-line font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]"
+            style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem, 7vw, 5.5rem)' }}
+          >
             SELECTED
           </h1>
-          <h1 className="section-heading reveal-line accent-text" style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(3rem,8vw,7rem)' }}>
+          <h1
+            className="reveal-line font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]/40 mt-1"
+            style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem, 7vw, 5.5rem)' }}
+          >
             WORK.
           </h1>
         </div>
-        <p className="text-muted-gray text-base font-light max-w-lg mt-8 leading-relaxed">
+        <p className="text-[#888888] text-sm md:text-base font-light max-w-lg mt-6 leading-relaxed">
           A curated selection of projects spanning web development, design systems, and creative experiments.
         </p>
         {/* Ambient glow */}
@@ -62,7 +68,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* ── FILTER ── */}
-      <div className="max-w-7xl mx-auto px-6 mb-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 mb-10">
         <div className="flex flex-wrap gap-2 items-center border-b border-white/5 pb-6">
           <span className="text-xs font-mono text-muted-gray/40 tracking-widest mr-4 hidden sm:block">
             FILTER
@@ -94,7 +100,7 @@ export default function ProjectsPage() {
       </div>
 
       {/* ── PROJECT GRID ── */}
-      <div className="max-w-7xl mx-auto px-6 pb-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-24">
         <AnimatePresence mode="popLayout">
           {filtered.length === 0 && (
             <motion.p

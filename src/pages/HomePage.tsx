@@ -71,6 +71,7 @@ function WhatsappIcon({ className = 'w-3.5 h-3.5' }: { className?: string }) {
 export default function HomePage() {
   const reduced = useReducedMotion()
   const sectionsRef = useRef<HTMLDivElement>(null)
+  const heroRef = useRef<HTMLElement>(null)
 
   // GSAP scroll-reveals (MOTION 2: scroll-triggered)
   useEffect(() => {
@@ -111,6 +112,7 @@ export default function HomePage() {
           Stat blocks: outlined rectangles like reference image.
       ════════════════════════════════════════════════════════════ */}
       <section
+        ref={heroRef}
         className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-28 pb-16"
         style={{ background: '#050505' }}
       >

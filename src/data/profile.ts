@@ -6,19 +6,19 @@ export const profile = {
   monogram: 'LK',
   role: 'Web Developer & IT Specialist',
   tagline: 'Designing and building reliable web applications through code, systems thinking, and user-centered design.',
-  bio: 'Lulusan Teknik Informatika dari Politeknik Negeri Jember (IPK 3.72/4.00) dengan pengalaman profesional di bidang pengembangan perangkat lunak, web development, dan IT infrastructure.\n\nMemiliki keahlian teruji dalam pengembangan web berbasis PHP Laravel, React.js, JavaScript, Python, database MySQL, REST API integration, serta perancangan antarmuka UI/UX. Berpengalaman menangani sistem web internal, troubleshooting jaringan, IT asset management, dan optimalisasi performa platform digital.',
+  bio: 'Informatics Engineering graduate from Politeknik Negeri Jember (GPA 3.72 / 4.00) with hands-on experience in software engineering, web development, and IT infrastructure.\n\nProficient in web engineering across PHP Laravel, React.js, JavaScript, Python, MySQL database architecture, REST API integration, and modern UI/UX design. Experienced in maintaining internal web platforms, network troubleshooting, IT asset management, and digital platform performance optimization.',
   email: 'lukmantoc008@gmail.com',
   phone: '081330059485',
   location: 'Surabaya / Sampang, Indonesia',
   education: {
     institution: 'Politeknik Negeri Jember',
-    degree: 'Undergraduate Teknik Informatika',
+    degree: 'Applied Bachelor in Informatics Engineering',
     gpa: '3.72 / 4.00',
     period: '08/2021 – 08/2025',
   },
   availability: 'Open to Opportunities',
   isAvailable: true,
-  summary: 'Lulusan Teknik Informatika dari Politeknik Negeri Jember dengan pengalaman profesional selama dua tahun di bidang pengembangan perangkat lunak. Memiliki keahlian dalam pengembangan aplikasi dan web, analisis kebutuhan sistem, serta perancangan solusi digital yang efisien dan berorientasi pada pengguna.',
+  summary: 'Informatics Engineering graduate from Politeknik Negeri Jember with over two years of professional experience across software and web development. Skilled in building resilient web applications, systems requirement analysis, and designing user-centric, high-performance digital solutions.',
 }
 
 export const experiences = [

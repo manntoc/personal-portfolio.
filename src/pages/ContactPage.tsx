@@ -54,12 +54,12 @@ export default function ContactPage() {
   return (
     <PageWrapper>
       {/* ── HERO ── */}
-      <section className="relative pt-40 pb-20 max-w-7xl mx-auto px-6 overflow-hidden">
+      <section className="relative pt-24 md:pt-28 pb-6 md:pb-8 max-w-7xl mx-auto px-6 md:px-10 overflow-hidden">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xs font-mono text-electric-blue/70 tracking-widest uppercase mb-6 block"
+          className="text-xs font-mono text-[#888888] tracking-widest uppercase mb-4 block"
         >
           contact
         </motion.span>
@@ -68,8 +68,8 @@ export default function ContactPage() {
             initial={reduced ? false : { y: '100%', opacity: 0 }}
             animate={{ y: '0%', opacity: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="section-heading mb-2"
-            style={{ fontSize: 'clamp(2.8rem,7vw,6rem)' }}
+            className="font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]"
+            style={{ fontSize: 'clamp(2.8rem,7vw,5.5rem)' }}
           >
             LET'S MAKE
           </motion.h1>
@@ -79,8 +79,8 @@ export default function ContactPage() {
             initial={reduced ? false : { y: '100%', opacity: 0 }}
             animate={{ y: '0%', opacity: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="section-heading accent-text mb-10"
-            style={{ fontSize: 'clamp(2.8rem,7vw,6rem)' }}
+            className="font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]/40 mt-1"
+            style={{ fontSize: 'clamp(2.8rem,7vw,5.5rem)' }}
           >
             SOMETHING MATTER.
           </motion.h1>
@@ -92,7 +92,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── FORM + INFO ── */}
-      <div className="max-w-7xl mx-auto px-6 pb-40 grid md:grid-cols-[1fr_1.6fr] gap-16 md:gap-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-24 grid md:grid-cols-[1fr_1.6fr] gap-12 md:gap-16">
         {/* Left info */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}

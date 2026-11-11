@@ -49,20 +49,26 @@ export default function SkillsPage() {
   return (
     <PageWrapper>
       {/* ── HERO ── */}
-      <section className="relative pt-40 pb-16 max-w-7xl mx-auto px-6 overflow-hidden">
+      <section className="relative pt-24 md:pt-28 pb-10 md:pb-12 max-w-7xl mx-auto px-6 md:px-10 overflow-hidden">
         <div ref={heroRef}>
-          <span className="hero-line text-xs font-mono text-electric-blue/70 tracking-widest uppercase mb-6 block" style={{ opacity: reduced ? 1 : 0 }}>
+          <span className="hero-line text-xs font-mono text-[#888888] tracking-widest uppercase mb-4 block" style={{ opacity: reduced ? 1 : 0 }}>
             stack
           </span>
-          <h1 className="hero-line section-heading mb-2" style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem,7vw,6rem)' }}>
+          <h1
+            className="hero-line font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]"
+            style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem, 7vw, 5.5rem)' }}
+          >
             TOOLS I USE
           </h1>
-          <h1 className="hero-line section-heading accent-text mb-10" style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem,7vw,6rem)' }}>
+          <h1
+            className="hero-line font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]/40 mt-1"
+            style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem, 7vw, 5.5rem)' }}
+          >
             TO BUILD IDEAS.
           </h1>
         </div>
-        <p className="text-muted-gray text-base font-light max-w-lg leading-relaxed">
-          Technologies, tools, and practices I work with across frontend, backend, design, and creative development.
+        <p className="text-[#888888] text-sm md:text-base font-light max-w-lg mt-6 leading-relaxed">
+          Technologies, tools, and practices I work with across frontend, backend, database systems, and IT engineering.
         </p>
         <div className="absolute top-20 right-0 w-96 h-96 rounded-full pointer-events-none opacity-10"
           style={{ background: 'radial-gradient(circle, #2563EB 0%, transparent 70%)', filter: 'blur(80px)' }}
@@ -71,13 +77,13 @@ export default function SkillsPage() {
       </section>
 
       {/* Marquee */}
-      <div className="mb-20 border-y border-white/5 py-6">
+      <div className="mb-14 border-y border-white/5 py-4">
         <HorizontalMarquee items={allNames} speed={50} />
         <HorizontalMarquee items={allNames} speed={40} direction="right" className="mt-3 opacity-50" />
       </div>
 
       {/* ── SKILL CATEGORIES ── */}
-      <div className="max-w-7xl mx-auto px-6 pb-40 space-y-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-24 space-y-16 md:space-y-20">
         {skills.map((cat, ci) => {
           const Icon = CAT_ICONS[cat.category.split(' ')[0]] || Code
           return (

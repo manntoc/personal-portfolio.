@@ -16,26 +16,26 @@ const JOURNEY = [
   {
     phase: 'Education',
     label: '01',
-    title: 'Politeknik Negeri Jember — Teknik Informatika',
-    body: 'Menempuh pendidikan sarjana terapan Teknik Informatika dengan capaian IPK 3.72/4.00. Memperdalam arsitektur perangkat lunak, algoritma, rekayasa web, analisis sistem, dan manajemen basis data relasional.',
+    title: 'Politeknik Negeri Jember — Informatics Engineering',
+    body: 'Earned an Applied Bachelor degree in Informatics Engineering with a 3.72 / 4.00 GPA. Deepened core foundations in software architecture, algorithms, web engineering, systems analysis, and relational database management.',
   },
   {
     phase: 'Frontend Specialization',
     label: '02',
-    title: 'Studi Independen di Educa Studio (Salatiga)',
-    body: 'Mengembangkan kompetensi Web Frontend Developer melalui program bersertifikat di PT Educa Sisfomedia Indonesia. Membangun antarmuka web interaktif berbasis React, integrasi REST API backend, dan standarisasi UI/UX.',
+    title: 'Certified Independent Study at Educa Studio (Salatiga)',
+    body: 'Strengthened Web Frontend Developer capabilities through a rigorous national certified program at PT Educa Sisfomedia Indonesia. Built interactive React web applications, integrated RESTful APIs, and enforced component UI/UX standards.',
   },
   {
     phase: 'Enterprise & Systems',
     label: '03',
-    title: 'IT Staff & Web Engineering (Sidoarjo & Surabaya)',
-    body: 'Menangani pengembangan dan pemeliharaan sistem web internal di PT. Bertumbuh Melejit Berkah, perancangan web app Digital360, serta dukungan teknis infrastruktur IT dan otorisasi akun SAP di PT. Rexline Engineering Indonesia.',
+    title: 'IT Operations & Web Engineering (Sidoarjo & Surabaya)',
+    body: 'Engineered and maintained internal company web systems at PT Bertumbuh Melejit Berkah, developed the Digital360 web application, and provided critical IT infrastructure support along with SAP enterprise account authorization management at PT Rexline Engineering Indonesia.',
   },
   {
     phase: 'Creative Technologist',
     label: '04',
     title: 'Assya Vet Clinic — Digital Platform & Strategy',
-    body: 'Merancang dan mengimplementasikan strategi digital terpadu untuk Assya Vet Clinic di Surabaya: manajemen konten omnichannel, optimasi Meta Ads terukur, dan penguatan brand identity klinik hewan.',
+    body: 'Architected and executed integrated digital solutions for Assya Vet Clinic in Surabaya: omnichannel content operations, high-converting Meta Ads optimization, and strategic brand identity scaling.',
   },
 ]
 
@@ -107,24 +107,33 @@ export default function AboutPage() {
   return (
     <PageWrapper>
       {/* ── HERO ── */}
-      <section className="relative pt-40 pb-24 max-w-7xl mx-auto px-6 overflow-hidden">
+      <section className="relative pt-24 md:pt-28 pb-10 md:pb-12 max-w-7xl mx-auto px-6 md:px-10 overflow-hidden">
         <div ref={heroRef}>
-          <span className="hero-line text-xs font-mono text-electric-blue/70 tracking-widest uppercase mb-6 block" style={{ opacity: reduced ? 1 : 0 }}>
+          <span className="hero-line text-xs font-mono text-[#888888] tracking-widest uppercase mb-4 block" style={{ opacity: reduced ? 1 : 0 }}>
             about
           </span>
-          <h1 className="hero-line section-heading mb-2" style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem,7vw,6rem)' }}>
+          <h1
+            className="hero-line font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]"
+            style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem, 7vw, 5.5rem)' }}
+          >
             THE STORY
           </h1>
-          <h1 className="hero-line section-heading accent-text mb-2" style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem,7vw,6rem)' }}>
+          <h1
+            className="hero-line font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]/60 mt-1"
+            style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem, 7vw, 5.5rem)' }}
+          >
             BEHIND
           </h1>
-          <h1 className="hero-line section-heading mb-10" style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem,7vw,6rem)' }}>
+          <h1
+            className="hero-line font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]/40 mt-1"
+            style={{ opacity: reduced ? 1 : 0, fontSize: 'clamp(2.8rem, 7vw, 5.5rem)' }}
+          >
             THE WORK.
           </h1>
         </div>
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mt-6">
           <p className="text-muted-gray text-base md:text-lg font-light leading-relaxed">
-            Lulusan Teknik Informatika Politeknik Negeri Jember (IPK 3.72/4.00) dengan rekam jejak profesional di bidang web development, system analysis, IT support, dan strategi digital omnichannel.
+            Informatics Engineering graduate from Politeknik Negeri Jember (GPA 3.72 / 4.00) with proven professional experience across web development, system analysis, IT operations, and omnichannel digital strategy.
           </p>
         </div>
         {/* Ambient glow */}
@@ -163,10 +172,10 @@ export default function AboutPage() {
             {profile.name}
           </h2>
           <p className="text-muted-gray text-sm leading-relaxed mb-4">
-            Menggabungkan keahlian rekayasa web berbasis PHP Laravel, React.js, dan database MySQL dengan pengalaman operasional IT sistem enterprise serta manajemen strategi konten digital.
+            Bridging technical web development across PHP Laravel, React.js, and MySQL with enterprise IT systems management and data-informed digital content strategy.
           </p>
           <p className="text-muted-gray/80 text-sm leading-relaxed mb-8">
-            Berpengalaman mengembangkan sistem website internal, merancang arsitektur aplikasi berbasis REST API, hingga mengoptimalkan konversi kampanye iklan Meta Ads. Berorientasi pada stabilitas sistem, clean architecture, dan pengalaman pengguna yang seamless.
+            Experienced in building internal operational web platforms, architecting clean REST API integrations, and executing high-ROI Meta Ads campaigns. Driven by clean architecture, system reliability, and intuitive user experiences.
           </p>
           <div className="grid grid-cols-2 gap-4 mb-8">
             {[
