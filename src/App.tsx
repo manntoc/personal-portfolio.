@@ -13,6 +13,7 @@ import AboutPage from './pages/AboutPage'
 import SkillsPage from './pages/SkillsPage'
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
+import CertificatesPage from './pages/CertificatesPage'
 
 export default function App() {
   useCustomCursor()
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/about"           element={<AboutPage />} />
             <Route path="/skills"          element={<SkillsPage />} />
             <Route path="/contact"         element={<ContactPage />} />
+            <Route path="/certificates"   element={<CertificatesPage />} />
             <Route path="*"               element={<NotFoundPage />} />
           </Routes>
         </AnimatePresence>

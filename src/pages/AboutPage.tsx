@@ -1,12 +1,13 @@
 // src/pages/AboutPage.tsx
 // GSAP-driven timeline reveal. Each milestone animates in on scroll.
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { PageWrapper } from '../components/layout/PageWrapper'
+import { CertificatesOverlay } from '../components/ui/CertificatesOverlay'
 import { profile } from '../data/profile'
 import portrait from '../assets/portrait.jpg'
 
@@ -51,6 +52,7 @@ export default function AboutPage() {
   const timelineRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLDivElement>(null)
   const lineRef = useRef<HTMLDivElement>(null)
+  const [certOpen, setCertOpen] = useState(false)
 
   // Hero text reveal
   useEffect(() => {
@@ -246,7 +248,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── PHILOSOPHY ── */}
-      <section className="max-w-7xl mx-auto px-6 pb-40 border-t border-white/5 pt-16">
+      <section className="max-w-7xl mx-auto px-6 pb-20 border-t border-white/5 pt-16">
         <span className="text-xs font-mono text-electric-blue/70 tracking-widest uppercase mb-4 block">My Philosophy</span>
         <div className="grid md:grid-cols-2 gap-6">
           {PHILOSOPHY.map((principle, _i) => (
@@ -266,6 +268,53 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+
+      {/* ── CERTIFICATES CTA ── */}
+      <section className="max-w-7xl mx-auto px-6 pb-40 border-t border-white/5 pt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8"
+        >
+          <div>
+            <span className="text-xs font-mono text-electric-blue/70 tracking-widest uppercase mb-4 block">Credentials</span>
+            <h2
+              className="font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]"
+              style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
+            >
+              CERTIFICATES
+            </h2>
+            <h2
+              className="font-normal tracking-[-0.04em] leading-[0.9] text-[#E8E8EA]/30 mt-1"
+              style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)' }}
+            >
+              &amp; CREDENTIALS.
+            </h2>
+            <p className="mt-5 max-w-md text-muted-gray text-sm font-light leading-relaxed">
+              Academic degrees, professional certifications, and program completions — all in one place.
+            </p>
+          </div>
+
+          <motion.button
+            onClick={() => setCertOpen(true)}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="relative overflow-hidden group border border-white/10 px-8 py-5 flex items-center gap-3 text-sm font-mono tracking-widest uppercase text-white/60 hover:text-white/90 transition-colors"
+          >
+            {/* Animated fill on hover */}
+            <span
+              className="absolute inset-0 bg-white/5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+              aria-hidden="true"
+            />
+            <span className="relative">View All Certificates</span>
+            <ArrowRight size={14} className="relative group-hover:translate-x-1 transition-transform" />
+          </motion.button>
+        </motion.div>
+      </section>
+
+      <CertificatesOverlay open={certOpen} onClose={() => setCertOpen(false)} />
     </PageWrapper>
   )
 }
